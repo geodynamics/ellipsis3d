@@ -1,0 +1,3 @@
+*.o
+_options_definitions_files.h
+_options_variables_files.h
