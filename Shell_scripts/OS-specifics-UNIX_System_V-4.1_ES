@@ -1,0 +1,17 @@
+####################################
+# THE VPP AT RIKEN HAS THIS ODD OS NAME !
+
+CEXT=c      # C files are filename.$CEXT
+OBJEXT=o    # Object files are filename.$OBJEXT
+OBJFLAG=-c   # flag which makes cc produce object file
+
+FLAGS="-Xa"
+LDFLAGS=""
+OPTIM="-O -Wv,-m2,-Mi"
+CC="vcc"
+
+OS="vppOS"  # this is done because the OS name is meaningless and long winded
+OSARCH="vppOS-riken"
+HOST="Riken-VPP"  # this is done because the machine has different processors with different hostnames
+
+####################################

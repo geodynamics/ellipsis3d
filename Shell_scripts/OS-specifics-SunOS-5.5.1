@@ -1,0 +1,14 @@
+####################################
+# SUNOS 5 (Solaris) systems
+
+CEXT=c      # C files are filename.$CEXT
+OBJEXT=o    # Object files are filename.$OBJEXT
+OBJFLAG=-c  # flag which makes cc produce object file
+
+
+FLAGS="-D__sunos__ -Xa"
+LDFLAGS=" -lnsl -lm" 
+OPTIM="-fast -xO3 -fsimple -native"
+
+
+####################################

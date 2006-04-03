@@ -1,0 +1,12 @@
+####################################
+# HP-UX-A.09.05 system
+
+CEXT=c      # C files are filename.$CEXT
+OBJEXT=o    # Object files are filename.$OBJEXT
+OBJFLAG=-c  # flag which makes cc produce object file
+
+FLAGS="-Aa -D_HPUX_SOURCE"
+LDFLAGS=""
+OPTIM=" "
+
+####################################

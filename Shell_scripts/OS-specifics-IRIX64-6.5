@@ -1,0 +1,13 @@
+####################################
+#SGI Irix systems
+
+CEXT=c      # C files are filename.$CEXT
+OBJEXT=o    # Object files are filename.$OBJEXT
+OBJFLAG=-c   # flag which makes cc produce object file
+COMPRESS="/usr/sbin/gzip"
+
+FLAGS="-Xa"
+LDFLAGS="-IPA -64  " #  -mp -lmalloc_ss"
+OPTIM="-IPA -Ofast -64 " #  -mp "
+
+####################################

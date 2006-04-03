@@ -1,0 +1,12 @@
+####################################
+# SUNOS 4.x system
+
+CEXT=c      # C files are filename.$CEXT
+OBJEXT=o    # Object files are filename.$OBJEXT
+OBJFLAG=-c  # flag which makes cc produce object file
+
+FLAGS="-D__sunos__ -Dconst= "
+LDFLAGS=""
+OPTIM="-O -fsingle"
+
+####################################

@@ -1,0 +1,12 @@
+####################################
+# Dec Alpha, OSF 1
+
+CEXT=c      # C files are filename.$CEXT
+OBJEXT=u    # Object files are filename.$OBJEXT
+OBJFLAG=-j  # flag which makes cc produce object file
+
+FLAGS="-unsigned  -non_shared -math_library=fast -prefix=all -reentrancy=none -assume=noaccuracy_sensitive -unsigned_char -extern=strict_refdef -trapuv" 
+LDFLAGS="-unsigned  -non_shared -D_INTRINSICS" 
+OPTIM="-O -Ublas -float -Olimit 1000"
+
+####################################
