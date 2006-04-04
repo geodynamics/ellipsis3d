@@ -19,12 +19,18 @@ Author:
 */
 
 
+#include "config.h"
 
 #include <math.h>
+
+#if HAVE_STDLIB_H
+#include <stdlib.h>
+#endif
+
 #include "element_definitions.h"
 #include "global_defs.h"
 #include "function_prototypes.h"
-#include <stdlib.h>
+
 
 /* Functions to compute grain growth to use in rheological law.
    Applies if viscosity.GRAINSIZE != 0

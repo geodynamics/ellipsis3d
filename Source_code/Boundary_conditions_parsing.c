@@ -20,16 +20,24 @@ Authors:
 */
 
 
-#include "element_definitions.h"
-#include "global_defs.h"
-#include <math.h>
-#include <stdlib.h>
+#include "config.h"
 
-#if (defined __sunos__) || defined(__uxp__) || defined(__GNUC__)
+#include <math.h>
+
+#if HAVE_STDLIB_H
+#include <stdlib.h>
+#endif
+
+#if HAVE_STRING_H
 #include <string.h>
-#else
+#endif
+
+#if HAVE_STRINGS_H
 #include <strings.h>
 #endif
+
+#include "element_definitions.h"
+#include "global_defs.h"
 
 
 int read_bc_from_file(

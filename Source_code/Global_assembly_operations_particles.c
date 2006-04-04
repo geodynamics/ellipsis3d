@@ -20,11 +20,16 @@ Authors:
 */
 
 
+#include "config.h"
+
 #include <math.h> 
+
+#if HAVE_STDLIB_H
+#include <stdlib.h>
+#endif
+
 #include "element_definitions.h"
 #include "global_defs.h"
-#include <sys/time.h>
-#include <sys/resource.h>
 
 
 /* =================================================================

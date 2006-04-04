@@ -24,8 +24,14 @@ Authors:
  /*   This is where the scaling functions and grid related things are kept.
 	Louis Moresi aka LUIGI   6.xii.1989                */
 
+#include "config.h"
+
 #include <math.h>
+
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
+
 #include "element_definitions.h"
 #include "global_defs.h"
 

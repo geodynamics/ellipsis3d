@@ -20,23 +20,25 @@ Authors:
 */
 
 
-#if (defined __sunos__) || defined(__GNUC__)
-#include <string.h>
-#else
-#include <strings.h> 
-#endif
-
-#include <stdlib.h>  /* for drand48() */
-
-/*
-#if (! defined __GNUC__)
-#include <rpc/xdr.h> 
-#endif
-*/
+#include "config.h"
 
 #include <math.h>
+
+#if HAVE_STRING_H
+#include <string.h>
+#endif
+
+#if HAVE_STRINGS_H
+#include <strings.h>
+#endif
+
+#if HAVE_STDLIB_H
+#include <stdlib.h> /* for drand48() */
+#endif
+
 #include "element_definitions.h"
 #include "global_defs.h"
+
 
 void tracer_initial_locations(
 			      struct All_variables *E

@@ -19,24 +19,26 @@ Authors:
 
 */
 
+#include "config.h"
 
 #include <math.h>
+
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
 
-#if (defined __sunos__) || defined(__GNUC__)
+#if HAVE_STRING_H
 #include <string.h>
-#else
-#include <strings.h> 
 #endif
 
-/*
-#if (! defined __GNUC__)
-#include <rpc/xdr.h> 
+#if HAVE_STRINGS_H
+#include <strings.h>
 #endif
-*/
 
 #include "element_definitions.h"
-#include "global_defs.h"/******************************************************************/
+#include "global_defs.h"
+
+/******************************************************************/
 
 
 

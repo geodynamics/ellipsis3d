@@ -25,18 +25,18 @@ Authors:
 /* allocated, temperature, viscosity, node locations and how to use */
 /* them all established. 8.29.92 or 29.8.92 depending on your nationality*/
 
-/* #include <signal.h>
+#include "config.h"
+
 #include <math.h>
-#include <unistd.h>
-#include <malloc.h>
-#include <string.h>
-*/
+
+#if HAVE_STDLIB_H
+#include <stdlib.h>
+#endif
 
 #include <signal.h>
-#include <math.h>
+
 #include "element_definitions.h"
 #include "global_defs.h"
-#include <stdlib.h>
 
 int Emergency_stop;
 
@@ -65,7 +65,7 @@ void read_instructions(
   void construct_node_maps_3();
   void construct_ien();
   void construct_elem();
-  void interuption();
+  RETSIGTYPE interuption();
   void check_bc_consistency();
   void node_locations();
   void node_colouring();

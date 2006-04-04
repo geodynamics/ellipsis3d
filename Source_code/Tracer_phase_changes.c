@@ -19,24 +19,21 @@ Author:
 */
 
 
-#include <math.h>
-/* #include <malloc.h> */
-/* #include <rpc/rpc.h> */
+#include "config.h"
 
-#if (defined __sunos__)
+#include <math.h>
+
+#if HAVE_STRING_H
 #include <string.h>
-#else
-#if (!defined __GNUC__)
-#include <strings.h> 
 #endif
+
+#if HAVE_STRINGS_H
+#include <strings.h>
 #endif
-/*
-#if (! defined __GNUC__)
-#include <rpc/xdr.h> 
-#endif
-*/
+
 #include "element_definitions.h"
 #include "global_defs.h"
+
 
 int get_eq_phase(
 		 struct All_variables *E,

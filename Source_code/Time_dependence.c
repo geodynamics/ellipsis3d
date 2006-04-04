@@ -24,16 +24,22 @@ Authors:
 /* Assumes parameter list is opened and reads the things it needs. 
    Variables are initialized etc, default values are set */
 
-/*
-#include <malloc.h>
-*/
+
+#include "config.h"
+
 #include <math.h>
+
+#if HAVE_STRING_H
+#include <string.h>
+#endif
+
+#if HAVE_STRINGS_H
+#include <strings.h>
+#endif
+
 #include "element_definitions.h"
 #include "global_defs.h"
-#include <string.h>
 
-/* #include <stdlib.h> */ /* for "system" command */
-/*#include <strings.h> */
 
 void set_convection_defaults(
 			     struct All_variables *E

@@ -26,18 +26,22 @@ Authors:
    2D citcom data during runs for diagnostic
    purposes and to produce movies.             */
 
-#include <math.h>
-/* #include <stdlib.h> */
 
-#ifndef __sunos__               /* string manipulations */
-#include <strings.h>
-#else
-/* #include <string.h> */
+#include "config.h"
+
+#include <math.h>
+
+#if HAVE_STRING_H
+#include <string.h>
 #endif
 
+#if HAVE_STRINGS_H
+#include <strings.h>
+#endif
 
 #include "element_definitions.h"
 #include "global_defs.h"
+
 
 #define MAX_CMAP_SECTIONS 99
 

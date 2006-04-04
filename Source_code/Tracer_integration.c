@@ -19,26 +19,21 @@ Authors:
 
 */
 
+#include "config.h"
 
+#include <math.h>
 
-#if (defined __sunos__)
+#if HAVE_STRING_H
 #include <string.h>
-#else
-#if (!defined __GNUC__)
-#include <strings.h> 
-#endif
 #endif
 
-/*
-#if (! defined __GNUC__)
-#include <rpc/xdr.h> 
+#if HAVE_STRINGS_H
+#include <strings.h>
 #endif
-*/
 
 #include "element_definitions.h"
 #include "global_defs.h"
 
-#include <math.h>
 
 
 void get_tracer_elts_and_weights(

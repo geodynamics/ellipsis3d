@@ -24,11 +24,24 @@ Authors:
 
 /* Functions relating to the building and use of mesh locations ... */
 
+#include "config.h"
+
 #include <math.h>
+
+#if HAVE_STRING_H
+#include <string.h>
+#endif
+
+#if HAVE_STRINGS_H
+#include <strings.h>
+#endif
+
+#if HAVE_STDLIB_H
+#include <stdlib.h>
+#endif
+
 #include "element_definitions.h"
 #include "global_defs.h"
-#include <string.h>
-#include <stdlib.h>
 
 int M_node_cols;
 int *M_node_col_num[MAX_LEVELS];

@@ -25,17 +25,31 @@ Authors:
    and to turn them into a coherent suite of files.
 */
 
+#include "config.h"
+
 #include <math.h>
 
-#if(!defined __GNUC__)
+#if HAVE_MALLOC_H
 #include <malloc.h>
-#include <stdlib.h>             /* for "system" command */
 #endif
 
-#include <string.h>
+#if HAVE_STDLIB_H
+#include <stdlib.h> /* for "system" command */
+#endif
 
-#if(!defined __GNUC__)
+#if HAVE_STRING_H
+#include <string.h>
+#endif
+
+#if HAVE_STRINGS_H
+#include <strings.h>
+#endif
+
+#if HAVE_RPC_RPC_H
 #include <rpc/rpc.h>
+#endif
+
+#if HAVE_RPC_XDR_H
 #include <rpc/xdr.h> 
 #endif
 
@@ -986,11 +1000,13 @@ void generic_data_storage(
     
 
       if(checkpt_and_log && E->mesh.nsd == 3 && E->control.AVS)  { 
-#if (0 && !defined __GNUC__)
+#if (HAVE_RPC_RPC_H && HAVE_RPC_XDR_H && HAVE_LIBXDR)
 	data_length=1;
 
 	sprintf(output_file,"%s.%05d.AVSI.fld",E->control.data_file,file_number);
 	if ((fp=fopen(output_file,"w")) != NULL) {
+            XDR xdrs;
+            
 	    fprintf(fp,"# AVS format file pointing to data for run %s.%d\n",E->control.data_file,file_number);
 	    fprintf(fp,"#\n");
 	    fprintf(fp,"ndim=3\n");
@@ -1043,7 +1059,7 @@ void generic_data_storage(
 	      system(command);
 	    }
 	}
-#endif
+#endif /* HAVE_RPC_RPC_H && HAVE_RPC_XDR_H && HAVE_LIBXDR */
       }
 
 

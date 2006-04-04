@@ -20,7 +20,6 @@ Authors:
 */
 
 
-#include <signal.h>
 #include <math.h>
 #include "element_definitions.h"
 #include "global_defs.h"

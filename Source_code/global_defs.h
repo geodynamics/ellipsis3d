@@ -33,9 +33,8 @@ Authors:
 
 #include <stdio.h>
 
-#if defined(__osf__) 
 void *Malloc1(); 
-#endif
+void Realloc1();
 
 /* #define fft twiddle_thumbs
    #define rft twiddle_thumbs */
@@ -48,7 +47,9 @@ void *Malloc1();
 
 /* ============================================== */
 
-#include "_options_definitions_files.hh" 
+/*#include "_options_definitions_files.hh" */
+#include "tracer_global_definitions.h" 
+#include "chemtrans_global_definitions.h" 
 
 /* ============================================== */
 
@@ -742,7 +743,10 @@ struct All_variables {
 #include "temperature_descriptions.h"
 
 /* MODULES */
-#include "_options_variables_files.hh"
+/*#include "_options_variables_files.hh"*/
+#include "advection_global_variables.h" 
+#include "convection_global_variables.h" 
+#include "tracer_global_variables.h" 
 
 
   FILE *fp,*fp1,*fp2;

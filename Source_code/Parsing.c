@@ -25,15 +25,24 @@ Author:
    then parse the contents as parameters for citcom */
 
 
+#include "config.h"
+
+#include <math.h>
 #include <stdio.h>
+
+#if HAVE_STDLIB_H
 #include <stdlib.h>
-#if defined( __sunos__) || defined(__uxp__) || defined(__GNUC__)
+#endif
+
+#if HAVE_STRING_H
 #include <string.h>
-#else
+#endif
+
+#if HAVE_STRINGS_H
 #include <strings.h>
 #endif
+
 #include "global_defs.h"
-#include <math.h>
 
 
 

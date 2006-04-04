@@ -18,32 +18,38 @@ Author:
 
 */
 
+#include "config.h"
 
-#include "element_definitions.h"
-#include "global_defs.h"
 #include <math.h>
 
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
 
-#if (!defined __GNUC__)
+#if HAVE_UNISTD_H
 #include <unistd.h>
 #endif
 
-#if (defined __sunos__) || defined(__uxp__) || defined(__GNUC__)
+#if HAVE_STRING_H
 #include <string.h>
-#else
+#endif
+
+#if HAVE_STRINGS_H
 #include <strings.h>
 #endif
 
-#if defined(__sgi) || defined(__osf__)
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
 #endif
+
+#include "element_definitions.h"
+#include "global_defs.h"
 
 extern int Emergency_stop;
 
 /* #include "/home/limbo1/louis/Software/include/dmalloc.h" */
 
-void interuption()
+RETSIGTYPE interuption()
 {  
   if (Emergency_stop++) exit(0);
   fprintf(stderr,"Cleaning up before exit\n");
