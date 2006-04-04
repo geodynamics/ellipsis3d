@@ -88,8 +88,4 @@ Ellipsis3D_SOURCES = \
 	Viscosity_structures.c \
 	Zeros_of_J0_and_J1.h
 
-Ellipsis3D_LDADD = $(LIBM)
-
-EXTRA_DIST =
-
 ## end of Makefile.am
