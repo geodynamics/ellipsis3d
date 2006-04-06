@@ -18,10 +18,10 @@ dnl Author:
 dnl   Louis Moresi <louis.moresi@sci.monash.edu>
 dnl
 
-# $Id: configure.ac 2603 2006-02-14 22:41:05Z leif $
+# $Id$
 
 AC_PREREQ(2.59)
-AC_INIT([Ellipsis3D], [1.0], [cig-mc@geodynamics.org], [Ellipsis3D])
+AC_INIT([Ellipsis3D], [1.0.0], [cig-mc@geodynamics.org], [Ellipsis3D])
 AC_CONFIG_AUX_DIR([./aux-config])
 AC_CONFIG_SRCDIR([Ellipsis3D.c])
 AC_CONFIG_HEADER([config.h])

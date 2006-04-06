@@ -1,3 +1,51 @@
+2006-04-06 18:52  leif
+
+	* [r2675] AUTHORS, COPYING, ChangeLog, INSTALL, NEWS, README:
+	  Added standard GNU info files. "ChangeLog" generated with svn2cl
+	  (http://ch.tudelft.nl/~arthur/svn2cl/) using the following
+	  command: svn log --xml --verbose | xsltproc --stringparam
+	  strip-prefix mc/3D/ellipsis3d/trunk --stringparam include-rev
+	  yes svn2cl.xsl - > ChangeLog
+
+2006-04-06 18:15  leif
+
+	* [r2674] global_defs.h: Added comments about how "module"
+	  #includes were originally generated.
+
+2006-04-06 18:00  leif
+
+	* [r2673] Advection_diffusion.c, Allocation_of_memory.c,
+	  Averages_and_integrals.c, Boundary_conditions_enforcement.c,
+	  Boundary_conditions_parsing.c, Boundary_conditions_shapes.c,
+	  Boundary_conditions_skew.c, Boundary_conditions_temperature.c,
+	  Boundary_conditions_velocity.c, Chem_transport.c,
+	  Construct_coefficient_matrices.c, Construct_mesh_arrays.c,
+	  Element_calculations.c, Ellipsis3D.c, Fourier_transforms.c,
+	  Full_multigrid_non_linear.c, Gauss_seidel.c, Geometry_axi.c,
+	  Geometry_cartesian.c, Geometry_spherical.c,
+	  Global_assembly_operations_nodes.c,
+	  Global_assembly_operations_particles.c, Grain_growth.c,
+	  Initial_conditions.c, Instructions.c, Jacobians.c,
+	  MG_matrix_solver.c, MG_solver_mesh_operations.c,
+	  MG_solver_setup.c, Makefile.am, Material_properties_matrices.c,
+	  Matrix_operations_dot_prod.c, Matrix_operations_multipy.c,
+	  Nodal_mesh.c, Output.c, PPM_output.c,
+	  Pan_problem_misc_functions.c, Parsing.c, Process_buoyancy.c,
+	  Process_velocity.c, Profiling.c, Shape_functions.c,
+	  Shell_scripts, Size_does_matter.c, Source_code,
+	  Time_dependence.c, Topo_gravity.c, Tracer_advection.c,
+	  Tracer_build_matrices.c, Tracer_initialization.c,
+	  Tracer_integration.c, Tracer_mesh_interactions.c,
+	  Tracer_phase_changes.c, Tracer_read.c,
+	  Tracer_tracer_interactions.c, Uzawa_constraint_iteration.c,
+	  Viscosity_structures.c, Zeros_of_J0_and_J1.h,
+	  advection_global_variables.h, chemtrans_global_definitions.h,
+	  configure.ac, convection_global_variables.h,
+	  element_definitions.h, function_prototypes.h, global_defs.h,
+	  temperature_descriptions.h, tracer_global_definitions.h,
+	  tracer_global_variables.h, viscosity_descriptions.h: Removed
+	  extra directory level ("Source_code"); nuked "Shell_scripts".
+
 2006-04-04 01:26  leif
 
 	* [r2669] Source_code/Build.log, Source_code/Build.log.previous,
