@@ -1,0 +1,22 @@
+Ellipsis3D NEWS -- history of user-visible changes.  2006-04-06
+
+Please report bugs at <http://geodynamics.org/roundup>.
+Send questions to cig-mc@geodynamics.org.
+
+
+Version 1.0.0
+
+* Ellipsis3D is now available from CIG <http://www.geodynamics.org/>.
+
+* Ellipsis3D is now distributed under the GNU General Public License.
+  See the file COPYING for copying conditions.
+
+* Ellipsis3D now uses the GNU Build System (Autoconf, Automake, and
+  Libtool).  See the file INSTALL for building and installation
+  instructions.
+
+
+Local variables:
+version-control: never
+mode: indented-text
+end:
