@@ -17,11 +17,11 @@
 ##   Louis Moresi <louis.moresi@sci.monash.edu>
 ##
 
-# $Id: Makefile.am 2397 2005-10-04 22:37:25Z leif $
+# $Id$
 
-bin_PROGRAMS = Ellipsis3D
+bin_PROGRAMS = ellipsis3d
 
-Ellipsis3D_SOURCES = \
+ellipsis3d_SOURCES = \
 	Advection_diffusion.c \
 	advection_global_variables.h \
 	Allocation_of_memory.c \
