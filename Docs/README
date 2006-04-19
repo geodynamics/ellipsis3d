@@ -1,0 +1,21 @@
+New and improved ellipsis3d, circa Dec 2004.
+Removed some pressure bugs.
+Fixed elasticity in 3D
+Fixed some field boundary conditions in 3d.
+
+To compile, go into Shell_scripts and type build_code
+If all goes well, this should do it. If not, you might need to make
+a machine-specific file and pass your favourite compiler flags (see egs in
+this directory).
+
+I have included the elasticity benchmark. To get this to work, however, you need to
+comment out a remove_surface... call in Full_multigrid...c. 2d works great, in 3d the numerical
+elasticity works well (cw analytical & 2d) but the analytical solution is off - be warned.
+
+Included also are a preprint to a computers and geoscience paper submitted in 2005 (revised 2006). Might be useful to someone. It also describes some 3d examples that have been included in "Examples" directory.
+
+Ellipsis3d does not have great 3d visualization capabilities. I recommend using either gmt or opendx (www.opendx.org). I've included some docs about the latter. You use nodal output directly. However, for particle data, you need to run it through a perl script (included in examples directory) to convert from binary to particle. Wouldn't try to load all the particles up at once, incidently - takes up too much memory and crashes opendx. Pick you favourite material usually works.
+
+Ok, I don't know what I've left, but if you've got any questions, don't hesistate to contact me (Craig O'Neill), now at coneill@els.mq.edu.au.
+
+-Craig O'Neill, Feb, 2005.

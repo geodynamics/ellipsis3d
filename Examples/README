@@ -1,0 +1,6 @@
+This directory contains files pertaining the the examples in the O'Neill et al (2006) Comp. Geosci. paper. The Ellipsis3D* directory containts ellipsis input files (run by typing ./ellipsis ellipsis_input    - where ellipsis is the name of the executable, and ellipsis_input is the name of the input file). Directory also contains jpgs of what the output should look like.
+The 2nd directory (opendx) contains stuff for procesing ellipsis output, and plotting it in opendx. Which is free, and very cool, and I highly recommend playing with it. (www.opendx.org).
+Email my if you need help: coneill@els.mq.edu.au
+cheers
+Craig O'Neill
+

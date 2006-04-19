@@ -1,0 +1,2 @@
+This directory contains a bunch of scripts (bash & perl) to process ellipsis3D datafiles, specifically for plotting in opendx. Some modification of these will be required. The other example directories contain the opendx files required to reproduce the plots in the O'Neill et al. Comp. & Geosci. (2006) paper. Enjoy.
+-C.O'N.

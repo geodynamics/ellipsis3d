@@ -1,0 +1,65 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+    
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    
+  <meta name="Author" content="Craig O'Neill">
+  <meta name="GENERATOR" content="Mozilla/4.75 [en] (X11; U; Linux 2.2.16-22 i686) [Netscape]"><title>Plotting ellipsis output in opendx</title></head>
+
+<body>
+<h2><font face="Helvetica, Arial, sans-serif"> 3D plots with opendx:</font></h2>
+<center><img src="plotting_opendx_files/fatplume_rising.gif" align="texttop" height="500" width="650"></center><br>
+<p><font face="Helvetica, Arial, sans-serif">
+To make the above plot(s) with opendx, we first have to import the data. Lets say our data input file is of the format:<br>
+x,y,z, data<br>
+(Note: for ellipsis data, a simple perl script can put it in this format).<br>
+To plot this, first run opendx. This brings up a control panel that lets you decide what to do next. Select "Import data."<br>
+<center><img src="plotting_opendx_files/import_fatplume1.jpe" align="texttop"></center><br>
+This brings up a Data Prompter. For our case, we want to define the datapoint locations, so select <br>
+"Grid or scattered file" then clicking on the scattered grid button. We
+have one variable, so that's ok. Our positions are defined in our data
+file, so we hit this button. Next click "Describe data". This brings up
+the screen below:
+<center><img src="plotting_opendx_files/import_fatplume2.jpe" align="texttop"></center><br>Here
+we enter the name of the datafile we want to import, and if you have a
+header you can tell it to skip so many lines. Now we don't want to
+define the grid, since this causes opendx to loop through the datafile
+its own way, ignoring our locations and defining its own wrong
+positions. Just set the number of datapoints you have (if you're not
+sure, type <br>
+<bold> &gt; vi datafile </bold> <br>
+in the terminal and read how many lines you have. The make sure its
+reading your data and locations in the right order (top right). Save
+this setup, and you will have created a .general file, which is then
+what you tell opendx to import in your program. (This is just a header
+file that desccribes your datafile and format).<br>
+You may have noticed when you first started opendx that you had an option to "Edit visual programs." Click on this now.<br>
+<center><img src="plotting_opendx_files/plotting_fatplume_opendx.jpe" align="texttop"></center><br>
+This is a flowchart representing the sequence of modules that made the
+above image(s). Make sure that the "All" option under Categories is
+selected. The modules are then listed in the bottom left menu in
+alphabetical order. Click on them, and then on the workspace to put
+them in the program. You join them by clicking on the tabs, and
+dragging to another module. Ok, what do they do. The first one
+"FileSelector" you use to select your .general file you made before (to
+open it, double click). You connect this then to the import module,
+which imports your data. The AutoGlyphs module creates little pictures
+(spheres or diamonds or arrows, if its a vector) at each data point,
+which you can then plot up (via AutoColor and the to Image). You will
+notice this is not connected; we haven't plotted this glyphs in the
+above image. From Import, we can also send the data to AutoGrid, which
+is a black-box gridding function. We the send the data to two different
+Isosurfaces: one to contour the hotstuff, one the cold (blue). We
+colour these differently also. We then Collect these streams (twice:
+note the second one is redundant in this example) - then we send it to
+Image. Select from the menu Execute-&gt; Execute Once. This will run
+the program and create an image, which you can then save as you
+favourite image format (as long as your favourite's tiff. Or ps).<br>
+</font></p>
+<hr width="100%">
+<font face="Helvetica, Arial, sans-serif"><a href="http://www.geosci.usyd.edu.au/users/craig/3dconvection.html"><b>Back to 3D convection</b></a><br>
+<a href="http://www.geosci.usyd.edu.au/users/craig/index.html"><b>Back to home</b></a></font>
+<hr width="100%"> 
+
+
+</body></html>
