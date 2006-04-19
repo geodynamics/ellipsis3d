@@ -406,8 +406,9 @@ void generic_data_storage(
 
       }
       else {
-	E->control.secret_case_fl[1] += 2./AA*exp(BB*time/AA)*E->advection.timestep/(1./E->V[2][1]-time) ;
-	Q = E->control.secret_case_fl[1] * exp(-BB*time/AA) ;
+	E->control.secret_case_fl[1] += (3/AA)*exp((1/AA)*time/(1/BB))*E->advection.timestep/(1./E->V[2][1]-time) ;
+	/*O'Neill - made this same as 1d except here AA = 1/AA */
+	Q = E->control.secret_case_fl[1] * exp(-(1/AA)*time/(1/BB)) ;
 	E->control.secret_case_fl[3] = Q ;
 	E->control.secret_case_fl[2] = time ;
 	fprintf(stderr,"Testing Q(b) (whatever the hell this is) %g\n",Q);
