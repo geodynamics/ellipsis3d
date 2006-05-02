@@ -1,0 +1,9 @@
+file = ../scripts/materialOnePoints_NUMBER.dat
+points = LINES
+format = ascii
+interleaving = field
+field = locations, field0
+structure = 3-vector, scalar
+type = float, float
+
+end

@@ -1,0 +1,9 @@
+file = ../scripts/nodesNUMBER.dat
+points = LINES
+format = ascii
+interleaving = field
+field = locations, vel, temp
+structure = 3-vector, 3-vector, scalar
+type = float, float, float
+
+end

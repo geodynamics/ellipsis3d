@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -w
+#!/usr/bin/perl -w
 
 # Use appropriate maths libraries
 use Math::Trig;
@@ -15,7 +15,7 @@ $time=$ARGV[0];
 # This is only meant to show you how it can be done, it is not in final working order
 # and could change for different runs
  print "$time \n";
-$name="../iso-test.$time.node_data";    #Note ";" at end of EVERY line in perl script
+$name="../../../iso-test.$time.node_data";    #Note ";" at end of EVERY line in perl script
 print "Trying to open $name \n";
 
 #Now open input file
