@@ -2,6 +2,28 @@ We are pleased to announce the version 1 release of Ellipsis3D.
 
 See the file INSTALL for building and installation instructions.
 
+Once you have built the package, you can test it on the chemical plume
+example
+
+  ./ellipsis3d Examples/Ellipsis3D_2004_examples/chemical_plume.input
+
+Let it run as long as you like.  Then munge the data for OpenDX with
+the commands
+
+  cd Examples/opendx/scripts/
+  ./get_node_files_dx_format.mk
+  ./get_particles_dx_format.mk
+
+Now run dx on the file
+
+  Examples/opendx/scripts/chemicalplume/particles_isosurface_glyph.net
+
+By default, it will show the first time step.  Change the input files
+to get later time steps.  You should see a picture like
+
+  Examples/Ellipsis3D_2004_examples/chemical_plume.jpg
+
+
 Please submit bug reports via the World Wide Web at:
     http://geodynamics.org/roundup    
 
