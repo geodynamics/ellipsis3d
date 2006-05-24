@@ -16,7 +16,7 @@ the commands
 
 Now run dx on the file
 
-  Examples/opendx/scripts/chemicalplume/particles_isosurface_glyph.net
+  Examples/opendx/chemicalplume/particles_isosurface_glyph.net
 
 By default, it will show the first time step.  Change the input files
 to get later time steps.  You should see a picture like
