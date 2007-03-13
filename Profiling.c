@@ -93,7 +93,7 @@ standard_precision CPU_time()
     break;
     
     case TIMES:
-#if (HAVE_TIMES && HAVE_SYS_TIMES_H)
+#if (HAVE_TIMES && HAVE_SYS_TIMES_H && HAVE_UNISTD_H)
     {
         struct tms time_now;
         time_t utime;
@@ -104,12 +104,12 @@ standard_precision CPU_time()
         
         if (visit==0) {
             sometime=times(&time_now);
-            initial_time = (standard_precision) time_now.tms_utime / (standard_precision) CLK_TCK;
+            initial_time = (standard_precision) time_now.tms_utime / (standard_precision) sysconf(_SC_CLK_TCK);
             visit++;
         }
         
         sometime=times(&time_now);
-        time = (standard_precision) time_now.tms_utime / (standard_precision) CLK_TCK - initial_time;
+        time = (standard_precision) time_now.tms_utime / (standard_precision) sysconf(_SC_CLK_TCK) - initial_time;
     }
 #endif
     break;
