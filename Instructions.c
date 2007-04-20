@@ -202,6 +202,7 @@ void global_default_values(
   E->control.MELTING_MODULE = 0;
   E->control.CHEMISTRY_MODULE = 0;
   E->control.CHEM_TRANS=0;
+  E->control.SHEAR_HEATING=0;
 
   E->control.ORTHOTROPY=0;
 
