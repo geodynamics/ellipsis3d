@@ -54,6 +54,7 @@ void advection_diffusion_parameters (
   
   /* Set intial values, defaults & read parameters*/
   
+  E->advection.timesteps = 0;
   E->advection.temp_iterations = 2; /* petrov-galerkin iterations: minimum value. */
   E->advection.total_timesteps = 1; 
   E->advection.sub_iterations = 1;
