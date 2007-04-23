@@ -195,10 +195,14 @@ void tracer_allocate_memory (
 	  current_allocation,E->tracer.NUM_TRACERS); */
 
   if(E->tracer.NUM_TRACERS > current_allocation) {  /* Yes we do */
-    old_allocation = current_allocation;
+    /* This song and dance with +/-1 is because the code want indices
+       from 1 to N, but C like 0 to N-1 */
+    old_allocation = current_allocation+1;
     current_allocation += granularity;
-    former_highest_tracer = old_allocation;
+    former_highest_tracer = old_allocation-1;
     current_highest_tracer = current_allocation;
+    if(old_allocation==1)
+      old_allocation=0;
   }
   else {
     return;
