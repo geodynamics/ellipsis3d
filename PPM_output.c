@@ -1282,6 +1282,11 @@ void add_tracers_to_pixmap(
   case 13:  /*RAA: 24/09/02, C. O'Neill - melting stuff */
     Colorfield=E->tracer.depl; 
     break; 
+  default:
+    fprintf(stderr,
+            "Coloring not implemented for this PPM_coloring choice: %d\n",
+            E->control.PPM_coloring[PPM_plot_number]);
+    exit(1);
 	    
   }
   
