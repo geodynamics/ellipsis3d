@@ -731,7 +731,6 @@ void tracer_initial_locations(
    
      fprintf(E->fp1,"dims node_dims %g %g \n",dims,E->mesh.nsd);
      fprintf(stderr,"dims_node_dims %g %g \n",dims,E->mesh.nsd);
-     fprintf(stderr,"Tracer_read, PEN_BULK: %g \n",E->tracer.visc[E->tracer.property_group[436]].Pen_bulk);
 
 
      if (2==dims) {
