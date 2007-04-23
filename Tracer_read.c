@@ -707,15 +707,15 @@ void tracer_initial_locations(
     
       for(m=1;m<=E->tracer.NUM_TRACERS;m++) { /* RAA --> added this distinction  */
 	if(2==dims) {  
-	  if((E->tracer.tx[m] > rect_tx1[i]) && (E->tracer.tx[m] <= rect_tx2[i]) &&
-	     (E->tracer.tz[m] > rect_tz1[i]) && (E->tracer.tz[m] <= rect_tz2[i]) ) {
+	  if((E->tracer.tx[m] >= rect_tx1[i]) && (E->tracer.tx[m] <= rect_tx2[i]) &&
+	     (E->tracer.tz[m] >= rect_tz1[i]) && (E->tracer.tz[m] <= rect_tz2[i]) ) {
 	      E->tracer.property_group[m] = rect_tracer_colour[i];
 	  }
 	}
 	else if(3==dims) {	/* RAA --> added this bit  */
-	  if((E->tracer.tx[m] > rect_tx1[i]) && (E->tracer.tx[m] <= rect_tx2[i]) &&
-	     (E->tracer.tz[m] > rect_tz1[i]) && (E->tracer.tz[m] <= rect_tz2[i]) &&
-	     (E->tracer.ty[m] > rect_ty1[i]) && (E->tracer.ty[m] <= rect_ty2[i]) ) {
+	  if((E->tracer.tx[m] >= rect_tx1[i]) && (E->tracer.tx[m] <= rect_tx2[i]) &&
+	     (E->tracer.tz[m] >= rect_tz1[i]) && (E->tracer.tz[m] <= rect_tz2[i]) &&
+	     (E->tracer.ty[m] >= rect_ty1[i]) && (E->tracer.ty[m] <= rect_ty2[i]) ) {
 	      E->tracer.property_group[m] = rect_tracer_colour[i];
 	  }
         }
