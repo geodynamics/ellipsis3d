@@ -235,7 +235,6 @@ void stress_update
 	  smoothing_ratio);
   }
 
-  fprintf(stderr,"HERE IS TRACER.PT (A)   %g \n",E->tracer.Pt[436]) ;	
   if(2==dims && 2==dofs) {
     for(m=1;m<=E->tracer.NUM_TRACERS;m++) { 
       

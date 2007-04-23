@@ -146,11 +146,9 @@ void read_instructions(
   
 #if 1 /*RAA: 10/04/02, this was #if 0 for Linux, but put it back in*/
   fprintf(stderr,"Producing initial startup picture\n");
-  fprintf(stderr,"IN INSTRUCTIONS, PEN_BULK: %g \n",E->tracer.visc[E->tracer.property_group[436]].Pen_bulk);
   sprintf(output_file,"%s.start.ppm",E->control.data_file);
    generate_2Ddata_pixmap(E,output_file); 
   fprintf(stderr,"Producing initial startup picture ... done\n");
-  fprintf(stderr,"IN VISC HERE, PEN_BULK: %g \n",E->tracer.visc[E->tracer.property_group[436]].Pen_bulk);
 #endif  
 
 

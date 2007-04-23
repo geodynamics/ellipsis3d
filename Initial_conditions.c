@@ -46,9 +46,7 @@ void common_initial_fields(
     report(E,"Initialize velocity");
     initial_velocity(E);
     report(E,"Initialize pressure field");
-    fprintf(stderr,"Initial cons, PEN_BULK: %g \n",E->tracer.visc[E->tracer.property_group[436]].Pen_bulk);
     initial_qterm(E);
-    fprintf(stderr,"Initial cons, PEN_BULK: %g \n",E->tracer.visc[E->tracer.property_group[436]].Pen_bulk);
 
     
     return;

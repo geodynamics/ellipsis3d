@@ -54,12 +54,10 @@ void solve_constrained_flow_iterative(
   const int dofs = E->mesh.dof;
   const int neq = E->mesh.neq;
  
-  fprintf(stderr,"IN FULL_MG, PEN_BULK: %g \n",E->tracer.visc[E->tracer.property_group[436]].Pen_bulk);
 
   if(E->control.verbose)
     fprintf(stderr,"Incompressibility via CG Uzawa iteration\n");
   
-  fprintf(stderr,"IN FULL_MG (2), PEN_BULK: %g \n",E->tracer.visc[E->tracer.property_group[436]].Pen_bulk);
 
   E->monitor.elapsed_time_vsoln1 =  E->monitor.elapsed_time_vsoln;
   E->monitor.elapsed_time_vsoln = E->monitor.elapsed_time;
