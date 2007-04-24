@@ -352,7 +352,10 @@ void velocity_boundary_conditions(
         fprintf(E->fp1," nno Vbs1,2  %d   %g  %g\n",i,E->Vb[1][0][i],E->Vb[2][0][i]);
      } */
       
-    
+
+    /* Set the boundary to non-skew by default. */
+    E->control.HAVE_SKEWBCS = 0;
+
     /* Skew boundary conditions */
 
 #if 0

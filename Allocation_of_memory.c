@@ -20,6 +20,7 @@ Authors:
 */
 
 
+#include <string.h>
 #include <math.h>
 #include "element_definitions.h"
 #include "global_defs.h"
@@ -65,6 +66,15 @@ void allocate_common_vars(
   E->strd1 = (standard_precision *) Malloc0((E->mesh.nno+1)*sizeof(standard_precision));
   E->depl = (standard_precision *) Malloc0((E->mesh.nno+1)*sizeof(standard_precision)); 
   /*RAA: 24/09/02, depl is melting stuff by C. O'Neill */
+
+  memset(E->T,0,(E->mesh.nno+1)*sizeof(standard_precision));
+  memset(E->nQ,0,(E->mesh.nno+1)*sizeof(standard_precision));
+  memset(E->edot,0,(E->mesh.nno+1)*sizeof(standard_precision));
+  memset(E->strs,0,(E->mesh.nno+1)*sizeof(standard_precision));
+  memset(E->strd,0,(E->mesh.nno+1)*sizeof(standard_precision));
+  memset(E->strd1,0,(E->mesh.nno+1)*sizeof(standard_precision));
+  memset(E->depl,0,(E->mesh.nno+1)*sizeof(standard_precision));
+
 
   if(2==E->mesh.nsd)
     E->Psi=(standard_precision *) Malloc0((E->mesh.nno+1)*sizeof(standard_precision));
