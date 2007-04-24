@@ -600,10 +600,10 @@ void direct_low_level(
     eq6=E->idd[i].doff[6];
     for(j=0;j<max_node;j++) {
       node1=E->Node_map_3[level][i*max_node+j];
-      if(E->NODE[level][node1] & ( OFFSIDE  ))  /* shouldn't happen though */
+      if(node1==0)
 	continue;
 
-      if(node1==0)
+      if(E->NODE[level][node1] & ( OFFSIDE  ))  /* shouldn't happen though */
 	continue;
 
       switch(dofs) {
