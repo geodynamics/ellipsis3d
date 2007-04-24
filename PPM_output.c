@@ -682,6 +682,11 @@ void add_cross_sections_to_pixmap (
     case 15:
       plot_variable=E->strd1;
       break;
+    default:
+      fprintf(stderr,
+              "This sample type is not supported: %d\n",
+              E->tracer.sample_type[sample]);
+      exit(1);
     }
 
 
