@@ -194,7 +194,7 @@ void gauss_seidel6_nbn(
 	  if(count%2)
 	    i=n2 + (n1-1)*noz + (n3-1)*noz*nox; 
 	  else
-	    i=nno - (n2 + (n1-1)*noz + (n3-1)*noz*nox); 
+	    i=nno - (n2 + (n1-1)*noz + (n3-1)*noz*nox) + 1; 
 	  /*RAA: 21/08/02, end fix; so now alternately traverses back and forth
 	      during the relaxation, instead of always in one direction */
 
