@@ -39,6 +39,7 @@ Authors:
 #include <strings.h>
 #endif
 
+#include <stdlib.h>
 #include "element_definitions.h"
 #include "global_defs.h"
 
