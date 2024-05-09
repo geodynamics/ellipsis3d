@@ -24,10 +24,9 @@ to get later time steps.  You should see a picture like
   Examples/Ellipsis3D_2004_examples/chemical_plume.jpg
 
 
-Please submit bug reports via the World Wide Web at:
-    http://geodynamics.org/roundup    
+Please submit bug reports by opening an issue on the geodynamics/ellipsis3d Github reposity. 
 
-Please send all questions by electronic mail to:
-    cig-mc@geodynamics.org
+Please send all questions to the geodynamics forum at:
+https://community.geodynamics.org/
 
 Ellipsis3D is free software.  See the file COPYING for copying conditions.
